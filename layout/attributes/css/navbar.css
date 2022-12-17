@@ -1,0 +1,143 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+/* header */
+header {
+    background-color: #946744;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    transition: .6s ease-out;
+}
+header h1 {
+    color: white;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.namee {
+    display: flex;
+    flex-direction: row;
+}
+.namee a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+}
+
+.navimg :hover{
+    color: #00C9AC !important;
+}
+.navimg {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#first-name {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 0;
+}
+
+#last-name {
+    color: #402E32;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 0;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dropakun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav  {
+    padding: 10px;
+}
+
+header nav  a {
+    color: #2F4858;
+    text-decoration: none;
+    font-size: 24px;
+    transition: .2s ease-in;
+}
+
+header nav  a:hover{
+    color: #00C9AC;
+}
+
+.clear h3 {
+    display: flex;
+
+    all: unset;
+}
+
+#menu a {
+    text-transform: capitalize !important;
+}
+.dropdown-menu li a {
+    font-size: 14px !important;
+}
+
+/* sticky header */
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(249, 94, 94);
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    transition: .6s ease-out;
+}
+/* topic news */
+.header {
+    padding: 10px;
+    margin: 0;
+    margin-top: 6px;
+    background-color: #B1886A;
+    display: flex;
+    justify-content: center;
+    transform: skew(7deg);
+}
+
+.header nav a  {
+    margin: 0 16px 0 16px;
+    text-decoration: none;
+    color: #FFF7EF;
+    transition: ease-in-out .5s;
+}
+
+.header nav a:hover  {
+    padding: 5px 16px 5px 16px;
+    color: aliceblue;
+    background-color: rgba(37, 37, 37, 0.704);
+    border-radius: 10px 0 10px 0;
+}
+/* header-end */
