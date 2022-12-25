@@ -5,26 +5,29 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>About</h6>
-                        <p class="text-justify">TukNews.com <i>(PORTAL BERITA TERKINI) </i> merupakan sebuah portal berita yang siap menyajikan para pembaca dengan berita-berita terkini dan terpopuler berasal dari berbagai macam kategori mulai dari entertainment hingga technology. Pantau selalu Portal Berita kami untuk mendapatkan informasi-informasi terbaru yang tidak kalah keren dari portal berita lainnya.</p>
+                        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
                         <h6>Categories</h6>
                         <ul class="footer-links">
-                                <li><a href="kategori.php?kategori=1">MARKET</a></li>
-                                <li><a href="kategori.php?kategori=2">TECHNOLOGY</a></li>
-                                <li><a href="kategori.php?kategori=3">ENTERTAINMENT</a></li>
-                                <li><a href="kategori.php?kategori=4">SPORT</a></li>
-                                <li><a href="kategori.php?kategori=5">LIFESTYLE</a></li>
-                                <li><a href="kategori.php?kategori=6">GAME</a></li>
+                                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
                         </ul>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
                         <h6>Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="aboutus.php">About Us</a></li>
-                            
+                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>

@@ -2,17 +2,6 @@
 require "../functions.php";
 session_start();
 
-if (isset($_POST["register"])) {
-    
-    if (registrasi($_POST) > 0) {
-        echo "<script>
-            alert('user baru berhasil ditambahkan!');
-        </script>";
-    }else {
-        echo mysqli_error($conn);
-    }
-    
-}
 
 // untuk membuat user tetap login ke index selama session nya belum di destroy
 if(isset($_SESSION["login"]))
@@ -27,6 +16,7 @@ if(isset($_POST["login"]))
     global $conn;
     $username = $_POST["usernamelogin"];
     $password = $_POST["passlogin"];
+    // variabel kalau user salah username atau password
     $erroruserlog;
     $errorpasslog;
     $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
@@ -41,10 +31,12 @@ if(isset($_POST["login"]))
         {
             // set session
             $_SESSION['login'] = TRUE;
+            $_SESSION['id'] = $row['id'];
             $_SESSION['fullname'] = $row['fullname'];
             $_SESSION['username'] = $row['username'];
             $_SESSION['gambar'] = $row['gambar'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['password'] = $password;
             $_SESSION['leveluser'] = $row['leveluser'];
 
             header("Location: ../index.php");
@@ -74,8 +66,22 @@ if(isset($_POST["login"]))
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="" method="post">
+                <?php 
+                if (isset($_POST["register"])) {
+                    
+                    if (registrasi($_POST) > 0) {
+                        echo "<script>
+                            alert('user baru berhasil ditambahkan!');
+                        </script>";
+                    }
+                    else {
+                        echo mysqli_error($conn);
+                    }
+                    
+                }
+                
+                ?>
                 <h1>Buat Akun</h1>
-                <span>Gunakan Email Anda Untuk Mendaftar</span>
                 <input id="username" type="username" name="username" required placeholder="Username" />
                 <div></div>
                 <input id="fullname" type="text" name="fullname" required placeholder="Name" />

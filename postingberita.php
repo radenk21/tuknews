@@ -1,14 +1,15 @@
 <?php 
 include "posting/posting-header.php";
-include "layout/navbar.php";
 include "layout/admin-navbar.php";
 ?>
 <?php 
+$conn;
+
 // cek apakah tombol submit sudah ditekan
 if (isset($_POST['submit'])) {
     // cek postingan berhasil terkirim atau tidak
     if( posting($_POST) > 0)
-    {
+    {   
         echo "
         <script>
         alert('Berita berhasil ditambahkan!');

@@ -26,7 +26,7 @@
                             <img src="img/nopict.png" width="50px" alt="Profil Akun <?= $_SESSION['username'];?>">
                         <?php endif;?>
                         <?php if($_SESSION['gambar'] != null) : ?>
-                            <img src="img/<?= $_SESSION['gambar']; ?>" alt="profil akun <?= $_SESSION['username'] ?>">
+                            <img src="img/<?= $_SESSION['gambar']; ?>" width="50px" style="border-radius:50%;" alt="profil akun <?= $_SESSION['username'] ?>">
                         <?php endif;?>
                         <!-- end pengecekan -->
                         <!-- menampilkan nama dari user -->
@@ -46,16 +46,10 @@
                     <?php if($_SESSION['leveluser'] == 1) : ?>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="profile.php">Info Profil</a>
+                                <a class="dropdown-item" href="update-profile.php">Info Profil</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="akun.php">Daftar Akun</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="postingberita.php">Posting Berita</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="daftarberita.php">Daftar Berita</a>
+                                <a class="dropdown-item" href="admin-dashboard.php">Admin Dashboard</a>
                             </li>
                         </ul>
                     <?php endif;?>

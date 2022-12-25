@@ -9,67 +9,36 @@ if(isset($_SESSION['login']))
 ?>
 
 <?php 
+$kategori = $_GET['kategori'];
 $berita = query("SELECT * FROM beritapost");
 ?>
 
-<div class="carousel-news my-2">
-        <div class="container">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <!-- indicator carousel start -->
-                <div class="carousel-indicators">
-                    <?php $i = 0; ?>
-                    <?php foreach($berita as $car) : ?>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?= $i?>" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <?php $i++?>
-                    <?php endforeach;?>
-                </div>
-                <!-- indicator carousel end -->
-                <!-- isi carousel start -->
-                <div class="carousel-inner">
-                    <!-- hot news 1 -->
-                    <?php $i = 0; ?>    
-                    <?php if($i == 0) : ?>
-                        <div class="carousel-item active" data-bs-interval="3300">
-                            <?php endif;?>
-                        <?php foreach($berita as $car) : ?>
-                            <?php if($i > 0) : ?>
-                                <div class="carousel-item" data-bs-interval="3300">
-                            <?php endif;?>
-
-                            <a href="isiberita.php?id=<?= $car["id"] ?>">
-                                <div class="car-img">
-                                    <img height="500px" style="object-fit: cover;" src="img/<?= $car["gambarberita"]; ?>" class="d-block w-100" alt="">
-                                </div>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5><?= $car["judul"]; ?></h5>
-                                </div>
-                            </a>
-                        </div>
-                    <?php $i++;?>
-                    <?php endforeach;?>
-                </div>
-                <!-- isi carousel end -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-</div>
-
-<div class="listberita container-xxl">
+<div class="listberita container-xxl mt-5">
     <div class="row">
         <div class="col">
             <div class="container">
-                <h3 class="bg-secondary text-center bg-gradient text-white rounded-3">Latest Post</h3>
                 <?php 
-                    $latest = query("SELECT * FROM beritapost ORDER BY id DESC LIMIT 4");
+                    $kategorilist = query("SELECT * FROM beritapost WHERE kategori='$kategori'");
                 ?>
-                <?php foreach($latest as $list) : ?>
+                <?php if(($kategori == '1')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">MARKET</h3>
+                <?php endif;?>
+                <?php if(($kategori == '2')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">TECHNOLOGY</h3>
+                <?php endif;?>
+                <?php if(($kategori == '3')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">ENTERTAINMENT</h3>
+                <?php endif;?>
+                <?php if(($kategori == '4')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">SPORT</h3>
+                <?php endif;?>
+                <?php if(($kategori == '5')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">LIFESTYLE</h3>
+                <?php endif;?>
+                <?php if(($kategori == '6')) :?>
+                    <h3 class="text-center py-1 rounded-3 bg-secondary text-white">GAME</h3>
+                <?php endif;?>
+                <?php foreach($kategorilist as $list) : ?>
                     <div class="card mb-3" >
                         <div class="row g-0">
                             <div class="col align-self-center">
@@ -96,7 +65,7 @@ $berita = query("SELECT * FROM beritapost");
                 <div class="container">
                     <h3 class="text-center py-1 bg-gradient rounded-3 bg-primary text-white">Popular</h3>
                     <?php 
-                    $popular = query("SELECT * FROM beritapost ORDER BY kunjungan DESC LIMIT 3");
+                    $popular = query("SELECT * FROM beritapost ORDER BY kunjungan DESC");
                     $i = 1;
                     ?>
                     <div class="card">
@@ -114,10 +83,9 @@ $berita = query("SELECT * FROM beritapost");
             </div>
             <div class="row">
                 <div class="container">
-                    
                     <h3 class="mt-3 py-1 bg-primary bg-gradient rounded-3 text-white text-center">Comments</h3>
                     <?php 
-                    $komentar = query("SELECT * FROM komentar WHERE status = 1  ORDER BY tanggalacc DESC LIMIT 4");
+                    $komentar = query("SELECT * FROM komentar WHERE status = 1  ORDER BY tanggalacc DESC");
                     ?>
                     <div class="card">
                         <div class="card-body">
