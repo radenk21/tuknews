@@ -13,12 +13,11 @@ require "functions.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posting Berita - Tuknews</title>
+    <title>Admin Dashboard - Tuknews</title>
 
     <!-- css style -->
     <link rel="stylesheet" href="layout/attributes/css/navbar.css">
     <link rel="stylesheet" href="layout/attributes/css/style.css">
-    <link rel="stylesheet" href="layout/attributes/css/profile.css">
 
     <!-- md5cdn -->
         <!-- Font Awesome -->

@@ -33,6 +33,9 @@ require "functions.php";
 
     <!-- font aws -->
     <script src="https://kit.fontawesome.com/e06601f356.js" crossorigin="anonymous"></script>
+
+    <!-- tinycloud text area -->
+    <script src="https://cdn.tiny.cloud/1/zatvyjvnoeju2pwjszrkzhbr9s4jfgqz7m1cnrsivwovnvd9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
